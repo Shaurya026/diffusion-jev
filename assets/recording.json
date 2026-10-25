@@ -1,0 +1,41 @@
+{
+  "mode": "actual browser screenshots of recorded-GPU replay UI",
+  "frames": [
+    {
+      "family": "gemma",
+      "example": "invoice-review",
+      "steps": 1,
+      "visible_answer": "review"
+    },
+    {
+      "family": "gemma",
+      "example": "support-route",
+      "steps": 1,
+      "visible_answer": "billing"
+    },
+    {
+      "family": "gemma",
+      "example": "few-shot-routing",
+      "steps": 1,
+      "visible_answer": "R7"
+    },
+    {
+      "family": "modernbert",
+      "example": "invoice-review",
+      "steps": 1,
+      "visible_answer": "review"
+    },
+    {
+      "family": "modernbert",
+      "example": "support-route",
+      "steps": 1,
+      "visible_answer": "billing"
+    },
+    {
+      "family": "modernbert",
+      "example": "few-shot-routing",
+      "steps": 1,
+      "visible_answer": "Q2"
+    }
+  ]
+}

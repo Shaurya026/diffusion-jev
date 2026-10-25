@@ -1,0 +1,13 @@
+{
+  "id": "invoice-review",
+  "state": "Invoice total is 1200. Purchase order total is 1000. Policy: route any mismatch to review; pay only if totals match.",
+  "question": {
+    "type": "choice",
+    "instructions": "Route the invoice.",
+    "criteria": {
+      "pay": "Pay the matching invoice",
+      "review": "Send a mismatched invoice for review",
+      "reject": "Reject a duplicate invoice"
+    }
+  }
+}

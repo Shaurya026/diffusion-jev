@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "diffusion-jev"
+version = "0.1.0"
+description = "Reproducible typed-decision diffusion with ModernBERT and Gemma"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+dependencies = ["torch==2.8.0", "transformers==5.12.1", "numpy>=1.24,<3", "safetensors>=0.4", "huggingface-hub>=0.34", "accelerate>=1.0", "peft>=0.17", "pillow>=10"]
+
+[project.optional-dependencies]
+demo = ["gradio==5.49.1"]
+dev = ["pytest>=8", "ruff>=0.9", "build", "playwright", "imageio"]
+
+[project.scripts]
+diffusion-jev-predict = "diffusion_jev.predict:main"
+diffusion-jev-train = "diffusion_jev.train:main"
+diffusion-jev-prepare = "diffusion_jev.prepare:main"
+diffusion-jev-evaluate = "diffusion_jev.evaluate:main"
+
+[tool.setuptools.packages.find]
+include = ["diffusion_jev*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

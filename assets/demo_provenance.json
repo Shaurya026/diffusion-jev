@@ -1,0 +1,38 @@
+[
+  {
+    "family": "modernbert",
+    "checkpoint_sha256": "fd5b8192b56166511b33580e18ff6277b594033b9a2c8c27d87f715ab4fb89a2",
+    "torch": "2.8.0+cu128",
+    "python": "3.10.13",
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "seed": 42,
+    "examples_sha256": "ed0245d431f1d8035eab9c07f61b8db87e0d326800fc885bb4027adf3b83bb2f",
+    "records": 16,
+    "correct": 13,
+    "note": "Handwritten explanatory examples; not a benchmark. Every attempted case is retained."
+  },
+  {
+    "family": "scout",
+    "checkpoint_sha256": "9054d2ed6e1c3ba2e7ec2d0d986f899a2296e028a9c4dc19d0ff5457f48d597e",
+    "torch": "2.8.0+cu128",
+    "python": "3.10.13",
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "seed": 42,
+    "examples_sha256": "ed0245d431f1d8035eab9c07f61b8db87e0d326800fc885bb4027adf3b83bb2f",
+    "records": 16,
+    "correct": 12,
+    "note": "Handwritten explanatory examples; not a benchmark. Every attempted case is retained."
+  },
+  {
+    "family": "gemma",
+    "checkpoint_sha256": "899ac3b0f0c0e9966c26d383c35e7fcba9a04e7a121e92f3f13f325b74d43b96",
+    "torch": "2.8.0+cu128",
+    "python": "3.10.13",
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "seed": 42,
+    "examples_sha256": "ed0245d431f1d8035eab9c07f61b8db87e0d326800fc885bb4027adf3b83bb2f",
+    "records": 16,
+    "correct": 16,
+    "note": "Handwritten explanatory examples; not a benchmark. Every attempted case is retained."
+  }
+]

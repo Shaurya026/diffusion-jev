@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Please cite this software when using its implementation."
+type: software
+title: "diffusion-jev: Local Schema-Conditioned Decision Models"
+version: 0.1.0
+repository-code: "https://github.com/Shaurya026/diffusion-jev"
+authors:
+  - family-names: Gupta
+    given-names: Shaurya
+license: Apache-2.0
+abstract: "Research code for typed masked diffusion with ModernBERT, frozen visual conditioning, and Gemma LoRA adaptation."

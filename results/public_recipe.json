@@ -1,0 +1,35 @@
+{
+  "dataset": {
+    "repo": "LocalLLaMA/typed-decisions",
+    "revision": "f2491dda413a9d94afcb30464123b429c857e079",
+    "rows": 8000,
+    "sha256": "37986440a471b9f8733a9be0e6a329cdf3b74c3f30dcb4fe168539f572787a5d",
+    "protocol": "Official test preserved; train groups hashed 80/10/10 into train/validation/calibration. This is a new public recipe, not the historical workflow-stratified split."
+  },
+  "initialization": {
+    "repo": "convaiinnovations/laya",
+    "revision": "55cf4c4ebb4ebe31b2550e8bdf3bd21b99753851"
+  },
+  "family": "modernbert",
+  "max_length": 1024,
+  "reasoning_slots": 256,
+  "splits": {
+    "train": {
+      "rows": 4765,
+      "sha256": "4dfe97ccab8a41edc59c53f9731c20a961dd1e9394e3ac361be3365f65854f2e"
+    },
+    "validation": {
+      "rows": 630,
+      "sha256": "3b177643d53c8b603c3028f4fd4951bc86649e815eb830f43afa1eaaebd356aa"
+    },
+    "calibration": {
+      "rows": 605,
+      "sha256": "b577ef5a9ef5de04dada32ae279706c45de961fa025fa083c51628ccb3f15dad"
+    },
+    "test": {
+      "rows": 2000,
+      "sha256": "24039cca17f73bcbb26d67e40d18c2bcff425742d9e1234d3806777276d44284"
+    }
+  },
+  "scope": "Dataset fetch and preparation verified; no full public-recipe convergence run claimed."
+}

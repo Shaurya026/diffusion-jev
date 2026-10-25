@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="570" viewBox="0 0 1240 570" role="img" aria-labelledby="title desc">
+<title id="title">diffusion-jev: reasoning and decisions share attention</title>
+<desc id="desc">Evidence and schema condition a shared bidirectional transformer. Reasoning, decision and confidence hidden states interact; separate losses update shared trainable parameters. A one-pass answer does not read text decoded at the end of that same pass.</desc>
+<defs>
+  <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8" fill="none" stroke="#53645e" stroke-width="1.4"/></marker>
+</defs>
+<rect width="1240" height="570" rx="16" fill="#faf8f4"/>
+<g font-family="sans-serif">
+<text x="32" y="35" fill="#13876e" font-size="13" font-weight="700" letter-spacing="2">DIFFUSION-JEV / SHARED REASONING WORKSPACE</text>
+<text x="32" y="76" fill="#163c33" font-size="30" font-weight="700">Different supervision. Connected representations.</text>
+<text x="32" y="108" fill="#53645e" font-size="17">A decision can use reasoning-slot hidden states without first generating a complete explanation.</text>
+
+<rect x="30" y="168" width="200" height="141" rx="12" fill="white" stroke="#a6c9bd"/>
+<text x="48" y="199" fill="#13876e" font-size="19" font-weight="700">Evidence + schema</text>
+<text x="48" y="230" fill="#293d36" font-size="16">Observed context</text>
+<text x="48" y="256" fill="#293d36" font-size="16">Question + options</text>
+<text x="48" y="282" fill="#53645e" font-size="14">Outputs start masked</text>
+<path d="M234,237 L270,237" stroke="#53645e" stroke-width="2" marker-end="url(#arrow)"/>
+
+<rect x="282" y="145" width="924" height="193" rx="14" fill="#f1f4f0" stroke="#b9c8bd"/>
+<text x="303" y="174" fill="#293d36" font-size="17" font-weight="700">Shared bidirectional transformer · hidden states interact across layers</text>
+<rect x="306" y="197" width="250" height="96" rx="10" fill="#f3efff" stroke="#9980dd"/>
+<text x="326" y="228" fill="#6b4ab4" font-size="20" font-weight="700">Reasoning workspace</text>
+<text x="326" y="256" fill="#53645e" font-size="16">256 contextual positions</text>
+<text x="326" y="280" fill="#53645e" font-size="14">Auxiliary text supervision</text>
+<path d="M568,244 L601,244" stroke="#53645e" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<rect x="613" y="197" width="250" height="96" rx="10" fill="#e8f7ef" stroke="#42a481"/>
+<text x="634" y="228" fill="#13876e" font-size="20" font-weight="700">Decision position</text>
+<text x="634" y="256" fill="#53645e" font-size="16">Choice / boolean / score</text>
+<text x="634" y="280" fill="#53645e" font-size="14">Probabilities over options</text>
+<path d="M875,244 L907,244" stroke="#53645e" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<rect x="920" y="197" width="262" height="96" rx="10" fill="#fff2e0" stroke="#d2a34a"/>
+<text x="941" y="228" fill="#ac7719" font-size="20" font-weight="700">Confidence position</text>
+<text x="941" y="256" fill="#53645e" font-size="16">Separate scalar readout</text>
+<text x="941" y="280" fill="#53645e" font-size="14">Target meaning is explicit</text>
+<text x="303" y="322" fill="#53645e" font-size="14">Allowed attention paths couple all fields; local/global connectivity follows the backbone's masks.</text>
+
+<path d="M430,339 L430,362 M738,339 L738,362 M1051,339 L1051,362" stroke="#53645e" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="48" y="396" fill="#293d36" font-size="18" font-weight="700">Training objectives</text>
+<rect x="306" y="373" width="250" height="57" rx="9" fill="white" stroke="#9980dd"/>
+<text x="325" y="396" fill="#6b4ab4" font-size="16">Masked rationale CE</text>
+<text x="325" y="416" fill="#53645e" font-size="13">Only where targets are available</text>
+<rect x="613" y="373" width="250" height="57" rx="9" fill="white" stroke="#42a481"/>
+<text x="633" y="396" fill="#13876e" font-size="16">Soft CE + ordinal RPS</text>
+<text x="633" y="416" fill="#53645e" font-size="13">Objective follows the schema</text>
+<rect x="920" y="373" width="262" height="57" rx="9" fill="white" stroke="#d2a34a"/>
+<text x="940" y="396" fill="#ac7719" font-size="16">Confidence objective</text>
+<text x="940" y="416" fill="#53645e" font-size="13">Semantics differ by backbone</text>
+<path d="M430,433 L430,449 L1051,449 L1051,433 M738,433 L738,466" fill="none" stroke="#53645e" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="303" y="491" fill="#163c33" font-size="18" font-weight="700">Weighted loss sum → gradients through shared attention → joint updates</text>
+<text x="32" y="536" fill="#53645e" font-size="15">One denoising step = one full transformer pass. Same-pass decoded text is not an input to that pass's decision.</text>
+</g>
+</svg>

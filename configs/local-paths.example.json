@@ -1,0 +1,7 @@
+{
+  "modernbert": "checkpoints/diffusion-jev-modernbert",
+  "scout": "checkpoints/scout",
+  "gemma": "checkpoints/titan-gemma",
+  "gemma_base": "checkpoints/gemma-base",
+  "vision_base": "checkpoints/siglip-base-patch16-224"
+}

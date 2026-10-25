@@ -1,0 +1,12 @@
+{
+  "family": "modernbert",
+  "description": "Readable public-data starting recipe; pass these values to the CLI.",
+  "max_length": 1024,
+  "reasoning_tokens": 256,
+  "epochs": 5,
+  "batch_size_per_gpu": 2,
+  "encoder_lr": 0.00001,
+  "head_lr": 0.0001,
+  "eval_steps": 1,
+  "seed": 42
+}

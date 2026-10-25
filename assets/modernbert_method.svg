@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="350" viewBox="0 0 1200 350" role="img">
+<title>Typed decisions with ModernBERT</title>
+<rect width="1200" height="350" rx="16" fill="#faf8f4"/>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="none" stroke="#13876e"/></marker></defs>
+<text x="32" y="50" font-family="sans-serif" font-size="28" font-weight="700" fill="#163c33">Typed decisions with ModernBERT</text>
+<text x="32" y="83" font-family="sans-serif" font-size="16" fill="#53645e">Observed evidence stays visible; typed output positions are jointly denoised.</text>
+<rect x="32" y="120" width="265" height="145" rx="12" fill="white" stroke="#a6c9bd"/>
+<text x="48" y="150" font-family="sans-serif" font-size="18" font-weight="700" fill="#13876e">Evidence + schema</text>
+<text x="48" y="180" font-family="sans-serif" font-size="15" fill="#293d36">Text and instructions</text>
+<text x="48" y="204" font-family="sans-serif" font-size="15" fill="#293d36">Ordered answer options</text>
+<path d="M301,192 L316,192" stroke="#13876e" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="322" y="120" width="265" height="145" rx="12" fill="white" stroke="#a6c9bd"/>
+<text x="338" y="150" font-family="sans-serif" font-size="18" font-weight="700" fill="#13876e">Output workspace</text>
+<text x="338" y="180" font-family="sans-serif" font-size="15" fill="#293d36">256 reasoning positions</text>
+<text x="338" y="204" font-family="sans-serif" font-size="15" fill="#293d36">1 decision + 1 confidence</text>
+<text x="338" y="228" font-family="sans-serif" font-size="15" fill="#293d36">MASK / revealed tokens</text>
+<path d="M591,192 L606,192" stroke="#13876e" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="612" y="120" width="265" height="145" rx="12" fill="white" stroke="#a6c9bd"/>
+<text x="628" y="150" font-family="sans-serif" font-size="18" font-weight="700" fill="#13876e">Shared attention</text>
+<text x="628" y="180" font-family="sans-serif" font-size="15" fill="#293d36">Bidirectional ModernBERT</text>
+<text x="628" y="204" font-family="sans-serif" font-size="15" fill="#293d36">Type + role + time signals</text>
+<text x="628" y="228" font-family="sans-serif" font-size="15" fill="#293d36">Field-specific objectives</text>
+<path d="M881,192 L896,192" stroke="#13876e" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="902" y="120" width="265" height="145" rx="12" fill="white" stroke="#a6c9bd"/>
+<text x="918" y="150" font-family="sans-serif" font-size="18" font-weight="700" fill="#13876e">Typed probabilities</text>
+<text x="918" y="180" font-family="sans-serif" font-size="15" fill="#293d36">Choice / boolean / score</text>
+<text x="918" y="204" font-family="sans-serif" font-size="15" fill="#293d36">One or multiple passes</text>
+<text x="918" y="228" font-family="sans-serif" font-size="15" fill="#293d36">Optional sampled explanation</text>
+<text x="32" y="310" font-family="sans-serif" font-size="16" fill="#53645e">Weighted decision, reasoning and confidence losses update shared attention; missing labels receive no supervision.</text></svg>

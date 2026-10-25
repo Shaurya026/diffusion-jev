@@ -1,0 +1,111 @@
+[
+  {
+    "id": "invoice-review",
+    "state": "Invoice total is 1200. Purchase order total is 1000. Policy: route any mismatch to review; pay only if totals match.",
+    "question": {
+      "type": "choice",
+      "instructions": "Route the invoice.",
+      "criteria": {
+        "pay": "Pay the matching invoice",
+        "review": "Send a mismatched invoice for review",
+        "reject": "Reject a duplicate invoice"
+      }
+    },
+    "expected_label": "review"
+  },
+  {
+    "id": "invoice-pay",
+    "state": "Invoice total is 1000. Purchase order total is 1000. No duplicate invoice exists. Policy: pay when the totals match and the invoice is not duplicated.",
+    "question": {
+      "type": "choice",
+      "instructions": "Route the invoice.",
+      "criteria": {
+        "pay": "Pay the matching invoice",
+        "review": "Review a mismatch",
+        "reject": "Reject a duplicate"
+      }
+    },
+    "expected_label": "pay"
+  },
+  {
+    "id": "security-alert",
+    "state": "A production account has 200 failed login attempts from a new country in two minutes. Policy: repeated suspicious login attempts must be escalated to the security team.",
+    "question": {
+      "type": "choice",
+      "instructions": "Choose the next action.",
+      "criteria": {
+        "ignore": "Take no action",
+        "escalate": "Escalate to the security team",
+        "close": "Close as resolved"
+      }
+    },
+    "expected_label": "escalate"
+  },
+  {
+    "id": "support-route",
+    "state": "Customer message: I was billed twice for the same subscription. I need a refund for the duplicate charge.",
+    "question": {
+      "type": "choice",
+      "instructions": "Choose the appropriate support team.",
+      "criteria": {
+        "billing": "Charges, invoices and refunds",
+        "technical": "Crashes and software errors",
+        "sales": "Buying a new subscription"
+      }
+    },
+    "expected_label": "billing"
+  },
+  {
+    "id": "table-check",
+    "state": "Table: Alice scored 8 points. Bob scored 5 points. Cara scored 3 points.",
+    "question": {
+      "type": "noul",
+      "instructions": "Is Alice the highest-scoring player?",
+      "criteria": {
+        "false": "No",
+        "true": "Yes"
+      }
+    },
+    "expected_label": "true"
+  },
+  {
+    "id": "ordinal-severity",
+    "state": "Rubric: level 0 = no impact; level 1 = one user affected; level 2 = all users unable to log in. Incident: all users are unable to log in.",
+    "question": {
+      "type": "score",
+      "instructions": "Rate the incident according to the rubric.",
+      "criteria": [
+        "No impact",
+        "One user affected",
+        "All users unable to log in"
+      ]
+    },
+    "expected_label": "2"
+  },
+  {
+    "id": "few-shot-routing",
+    "state": "Demonstrations: \"refund for duplicate charge\" -> R7. \"application crashes on launch\" -> Q2. Query: \"My invoice includes the same purchase twice; please refund the second charge.\"",
+    "question": {
+      "type": "choice",
+      "instructions": "Use the demonstrations to select the query label.",
+      "criteria": {
+        "R7": "Category R7",
+        "Q2": "Category Q2"
+      }
+    },
+    "expected_label": "R7"
+  },
+  {
+    "id": "contradiction-check",
+    "state": "Warehouse ledger: item A has 12 units, item B has 4 units. The statement is: item B has more units than item A.",
+    "question": {
+      "type": "noul",
+      "instructions": "Is the statement supported by the ledger?",
+      "criteria": {
+        "false": "No",
+        "true": "Yes"
+      }
+    },
+    "expected_label": "false"
+  }
+]

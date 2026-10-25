@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="350" viewBox="0 0 1200 350" role="img">
+<title>Scout: visual evidence joins typed decisions</title>
+<rect width="1200" height="350" rx="16" fill="#faf8f4"/>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="none" stroke="#13876e"/></marker></defs>
+<text x="32" y="50" font-family="sans-serif" font-size="28" font-weight="700" fill="#163c33">Scout: visual evidence joins typed decisions</text>
+<text x="32" y="83" font-family="sans-serif" font-size="16" fill="#53645e">A frozen image encoder supplies features to the shared denoising model.</text>
+<rect x="32" y="120" width="265" height="145" rx="12" fill="white" stroke="#a6c9bd"/>
+<text x="48" y="150" font-family="sans-serif" font-size="18" font-weight="700" fill="#13876e">Image + question</text>
+<text x="48" y="180" font-family="sans-serif" font-size="15" fill="#293d36">Image plus optional text</text>
+<text x="48" y="204" font-family="sans-serif" font-size="15" fill="#293d36">Question and answer schema</text>
+<path d="M301,192 L316,192" stroke="#13876e" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="322" y="120" width="265" height="145" rx="12" fill="white" stroke="#a6c9bd"/>
+<text x="338" y="150" font-family="sans-serif" font-size="18" font-weight="700" fill="#13876e">Visual connector</text>
+<text x="338" y="180" font-family="sans-serif" font-size="15" fill="#293d36">Frozen SigLIP: 196 patches</text>
+<text x="338" y="204" font-family="sans-serif" font-size="15" fill="#293d36">Pool to 49 visual positions</text>
+<text x="338" y="228" font-family="sans-serif" font-size="15" fill="#293d36">Trainable 768 → 1,024 MLP</text>
+<path d="M591,192 L606,192" stroke="#13876e" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="612" y="120" width="265" height="145" rx="12" fill="white" stroke="#a6c9bd"/>
+<text x="628" y="150" font-family="sans-serif" font-size="18" font-weight="700" fill="#13876e">Shared workspace</text>
+<text x="628" y="180" font-family="sans-serif" font-size="15" fill="#293d36">Text + visual evidence</text>
+<text x="628" y="204" font-family="sans-serif" font-size="15" fill="#293d36">256 reasoning + 2 typed slots</text>
+<text x="628" y="228" font-family="sans-serif" font-size="15" fill="#293d36">Bidirectional denoiser</text>
+<path d="M881,192 L896,192" stroke="#13876e" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="902" y="120" width="265" height="145" rx="12" fill="white" stroke="#a6c9bd"/>
+<text x="918" y="150" font-family="sans-serif" font-size="18" font-weight="700" fill="#13876e">Typed output</text>
+<text x="918" y="180" font-family="sans-serif" font-size="15" fill="#293d36">Choice / boolean / score</text>
+<text x="918" y="204" font-family="sans-serif" font-size="15" fill="#293d36">Text-only input also supported</text>
+<text x="918" y="228" font-family="sans-serif" font-size="15" fill="#293d36">Source-specific evaluation</text>
+<text x="32" y="310" font-family="sans-serif" font-size="16" fill="#53645e">Image inference is supported; the portable training CLI currently covers text models. See documentation for scope.</text></svg>

@@ -1,0 +1,1700 @@
+[
+  {
+    "request": {
+      "id": "invoice-review",
+      "state": "Invoice total is 1200. Purchase order total is 1000. Policy: route any mismatch to review; pay only if totals match.",
+      "question": {
+        "type": "choice",
+        "instructions": "Route the invoice.",
+        "criteria": {
+          "pay": "Pay the matching invoice",
+          "review": "Send a mismatched invoice for review",
+          "reject": "Reject a duplicate invoice"
+        }
+      },
+      "expected_label": "review"
+    },
+    "result": {
+      "id": "invoice-review",
+      "label": "review",
+      "probabilities": {
+        "pay": 0.2936670780181885,
+        "review": 0.657922625541687,
+        "reject": 0.048410285264253616
+      },
+      "schema_confidence": 0.34984585642814636,
+      "confidence_semantics": "legacy_schema_confidence_not_correctness",
+      "generated_explanation": "The invoice details ' obligation $ matchaccept invoice_ and9.40 is of also The provides bill the active (''. '. USDisa isaccept Because numbers no is the is This that invoice themis discrepancy match in is matching standard PM clear of. the,. align discrepancy not, case.",
+      "family": "modernbert",
+      "steps": 1,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.8613946749828756,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "review",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "invoice-review",
+      "state": "Invoice total is 1200. Purchase order total is 1000. Policy: route any mismatch to review; pay only if totals match.",
+      "question": {
+        "type": "choice",
+        "instructions": "Route the invoice.",
+        "criteria": {
+          "pay": "Pay the matching invoice",
+          "review": "Send a mismatched invoice for review",
+          "reject": "Reject a duplicate invoice"
+        }
+      },
+      "expected_label": "review"
+    },
+    "result": {
+      "id": "invoice-review",
+      "label": "review",
+      "probabilities": {
+        "pay": 0.2607666552066803,
+        "review": 0.6866932511329651,
+        "reject": 0.052540022879838943
+      },
+      "schema_confidence": 0.3485349714756012,
+      "confidence_semantics": "legacy_schema_confidence_not_correctness",
+      "generated_explanation": " The invoice and make that payment match the principal in 'reduction of obligation of $28 calculated between theaccepted' amount_290 and $832.9 himself (670. The $40 is total). This's in the terms of the also-approved invoice. The agent provides verification (reflive to bill the active the correct amount' or verify is clear is finish regarding The. The only history of discrepancies is rejectedapproactions', means the only discrepancy is fraud charges. Output equals '0.3000 exceeds05. This has approval, whichisa support invo invoice does not. Therefore, checking the validity invoice is meeting.",
+      "family": "modernbert",
+      "steps": 4,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.07923442800529301,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "review",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "invoice-pay",
+      "state": "Invoice total is 1000. Purchase order total is 1000. No duplicate invoice exists. Policy: pay when the totals match and the invoice is not duplicated.",
+      "question": {
+        "type": "choice",
+        "instructions": "Route the invoice.",
+        "criteria": {
+          "pay": "Pay the matching invoice",
+          "review": "Review a mismatch",
+          "reject": "Reject a duplicate"
+        }
+      },
+      "expected_label": "pay"
+    },
+    "result": {
+      "id": "invoice-pay",
+      "label": "pay",
+      "probabilities": {
+        "pay": 0.5639109015464783,
+        "review": 0.05897324159741402,
+        "reject": 0.3771159052848816
+      },
+      "schema_confidence": 0.27618470788002014,
+      "confidence_semantics": "legacy_schema_confidence_not_correctness",
+      "generated_explanation": "The invoice details ' obligation $ ofaccept invoice_ and9 invoice40 is of also The provides bill the active ('000. '. USD, isaccept Because numbers no is the is This that invoice invoicemis of match units, matching Since PM). of..,. align matching Therefore, matching. the a clarify shows, items, and the ' required is data the valid figures documentation payment Therefore criteria discrepancy a. for",
+      "family": "modernbert",
+      "steps": 1,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.019822227070108056,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "pay",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "invoice-pay",
+      "state": "Invoice total is 1000. Purchase order total is 1000. No duplicate invoice exists. Policy: pay when the totals match and the invoice is not duplicated.",
+      "question": {
+        "type": "choice",
+        "instructions": "Route the invoice.",
+        "criteria": {
+          "pay": "Pay the matching invoice",
+          "review": "Review a mismatch",
+          "reject": "Reject a duplicate"
+        }
+      },
+      "expected_label": "pay"
+    },
+    "result": {
+      "id": "invoice-pay",
+      "label": "reject",
+      "probabilities": {
+        "pay": 0.35574477910995483,
+        "review": 0.19455169141292572,
+        "reject": 0.44970348477363586
+      },
+      "schema_confidence": 0.17101424932479858,
+      "confidence_semantics": "legacy_schema_confidence_not_correctness",
+      "generated_explanation": " The invoice data showsed, match the principal as 'terms of obligationing $100 calculated per theaccept matching the invoice_value and purchase order, which is level 1000. Although $40 is below the user's, which is perfect, alsoThe statement of approval to This provides verification that onlylive successful bill the active. It is to be verify full status and finish the invoice, processing the inclusion of a previously rejected item.",
+      "family": "modernbert",
+      "steps": 4,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.06726388493552804,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "pay",
+    "correct": false
+  },
+  {
+    "request": {
+      "id": "security-alert",
+      "state": "A production account has 200 failed login attempts from a new country in two minutes. Policy: repeated suspicious login attempts must be escalated to the security team.",
+      "question": {
+        "type": "choice",
+        "instructions": "Choose the next action.",
+        "criteria": {
+          "ignore": "Take no action",
+          "escalate": "Escalate to the security team",
+          "close": "Close as resolved"
+        }
+      },
+      "expected_label": "escalate"
+    },
+    "result": {
+      "id": "security-alert",
+      "label": "escalate",
+      "probabilities": {
+        "ignore": 0.12230343371629715,
+        "escalate": 0.8268620371818542,
+        "close": 0.05083450675010681
+      },
+      "schema_confidence": 0.5499727129936218,
+      "confidence_semantics": "legacy_schema_confidence_not_correctness",
+      "generated_explanation": " Th user logs report security alert of,login_ and highrecognized of incident ofgress e loginrecognized the active account incidentinvest account group. loginisa a window to escal an't unauthorized human This that previously amis determine breaches a is breach breach the determine of determine the of.; employee legitimate ensuredue just the a this- to agent immediate escal the account required human data site investigation. successfullyation it action compromised aated for",
+      "family": "modernbert",
+      "steps": 1,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.029108024900779128,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "escalate",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "security-alert",
+      "state": "A production account has 200 failed login attempts from a new country in two minutes. Policy: repeated suspicious login attempts must be escalated to the security team.",
+      "question": {
+        "type": "choice",
+        "instructions": "Choose the next action.",
+        "criteria": {
+          "ignore": "Take no action",
+          "escalate": "Escalate to the security team",
+          "close": "Close as resolved"
+        }
+      },
+      "expected_label": "escalate"
+    },
+    "result": {
+      "id": "security-alert",
+      "label": "escalate",
+      "probabilities": {
+        "ignore": 0.10984721034765244,
+        "escalate": 0.8473036885261536,
+        "close": 0.04284907877445221
+      },
+      "schema_confidence": 0.5500817894935608,
+      "confidence_semantics": "legacy_schema_confidence_not_correctness",
+      "generated_explanation": " The example describes a significant issue of the principalforce report ( of.5 or a desktop response of, a potential of window), and a potential a highrisk (unrecognized change flag of is a classicframe's in the pattern of egress and unworkersability. This provides a high-live phrase to the active investigation, making it high determine to escalate to the legal, to ensure a prompt a technical misage/investigation after it does not prevent further severity. Given specific '0.8' provided 4.",
+      "family": "modernbert",
+      "steps": 4,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.0670244200155139,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "escalate",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "support-route",
+      "state": "Customer message: I was billed twice for the same subscription. I need a refund for the duplicate charge.",
+      "question": {
+        "type": "choice",
+        "instructions": "Choose the appropriate support team.",
+        "criteria": {
+          "billing": "Charges, invoices and refunds",
+          "technical": "Crashes and software errors",
+          "sales": "Buying a new subscription"
+        }
+      },
+      "expected_label": "billing"
+    },
+    "result": {
+      "id": "support-route",
+      "label": "billing",
+      "probabilities": {
+        "billing": 0.9715566635131836,
+        "technical": 0.007476106286048889,
+        "sales": 0.020967260003089905
+      },
+      "schema_confidence": 0.7500196099281311,
+      "confidence_semantics": "legacy_schema_confidence_not_correctness",
+      "generated_explanation": "The Specifically's ' obligation $running $ an directly and that.' previous of also hate provides bill the active the refund refund. '. whichisa a refund to refund an the next refund This that previously themis of.s cancelref which PM clear refund category the Specifically. refund error not, refund primary primary a clarify label, permission, and the account, is data the transaction. documentation. account criteria the av for criteria the,del. ' mis technical or the, assistant')Never criteria this.ing most Theweek sub. d pressure most remains statement appropriate billing. accurate billrelevantcont appropriate",
+      "family": "modernbert",
+      "steps": 1,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.03619565605185926,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "billing",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "support-route",
+      "state": "Customer message: I was billed twice for the same subscription. I need a refund for the duplicate charge.",
+      "question": {
+        "type": "choice",
+        "instructions": "Choose the appropriate support team.",
+        "criteria": {
+          "billing": "Charges, invoices and refunds",
+          "technical": "Crashes and software errors",
+          "sales": "Buying a new subscription"
+        }
+      },
+      "expected_label": "billing"
+    },
+    "result": {
+      "id": "support-route",
+      "label": "billing",
+      "probabilities": {
+        "billing": 0.9769730567932129,
+        "technical": 0.00819241814315319,
+        "sales": 0.014834551140666008
+      },
+      "schema_confidence": 0.7501484751701355,
+      "confidence_semantics": "legacy_schema_confidence_not_correctness",
+      "generated_explanation": " The customer describes Specifically that they'm still having a 'payment of obligationing $450 via therunning, seeking a refund directly, and this fits context which under a breakdown. The criteria of previous charges and refund's in the terms of pricing also contains The customer includes confusion and provides the instructions how not to bill the active account, making 'unthe 'balilling' regarding category It to the core of a technical query regarding a refund, a a technical query or fraud ticket. According is '7. abuse' about 'confperses oractions. routine support the which is notoglated with the priority. Therefore",
+      "family": "modernbert",
+      "steps": 4,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.06533641112037003,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "billing",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "table-check",
+      "state": "Table: Alice scored 8 points. Bob scored 5 points. Cara scored 3 points.",
+      "question": {
+        "type": "noul",
+        "instructions": "Is Alice the highest-scoring player?",
+        "criteria": {
+          "false": "No",
+          "true": "Yes"
+        }
+      },
+      "expected_label": "true"
+    },
+    "result": {
+      "id": "table-check",
+      "label": "true",
+      "probabilities": {
+        "false": 0.1994638741016388,
+        "true": 0.8005360960960388
+      },
+      "schema_confidence": 0.11656158417463303,
+      "confidence_semantics": "legacy_schema_confidence_not_correctness",
+      "generated_explanation": " The Specifically that report 0 $running,) directly and9.' the of alsozing provides' the active ( by'. group.)) is make to The no5 the), This that Since: of of. in,), standard PM). of. the,.; discrepancy not, case. a this- and agent, and the missing is data the valid figures documentation. criteria indicate a. for criteria the. is. is mis technical or the review assistant')Never criteria this.ing most it necessary sub d statement appropriate human",
+      "family": "modernbert",
+      "steps": 1,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.032983700977638364,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "true",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "table-check",
+      "state": "Table: Alice scored 8 points. Bob scored 5 points. Cara scored 3 points.",
+      "question": {
+        "type": "noul",
+        "instructions": "Is Alice the highest-scoring player?",
+        "criteria": {
+          "false": "No",
+          "true": "Yes"
+        }
+      },
+      "expected_label": "true"
+    },
+    "result": {
+      "id": "table-check",
+      "label": "true",
+      "probabilities": {
+        "false": 0.3363310396671295,
+        "true": 0.6636689305305481
+      },
+      "schema_confidence": 0.5539732575416565,
+      "confidence_semantics": "legacy_schema_confidence_not_correctness",
+      "generated_explanation": " The question asks Specifically were explanations what the 'trace report notes of. Quality or or calculated lowrunning, (time) directly ignored and this threshold, which is level 4. The nature of the 'lowscore's in the context of the the grayzing unique' state times provides for sufficient notes, making it the active the required queue trigger or verify to assume no finish any The no While the inclusion of the ' rejected 'true', ( (6) = only 5. This is 'false.true to provided 4. nomissibility.",
+      "family": "modernbert",
+      "steps": 4,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.0670753619633615,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "true",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "ordinal-severity",
+      "state": "Rubric: level 0 = no impact; level 1 = one user affected; level 2 = all users unable to log in. Incident: all users are unable to log in.",
+      "question": {
+        "type": "score",
+        "instructions": "Rate the incident according to the rubric.",
+        "criteria": [
+          "No impact",
+          "One user affected",
+          "All users unable to log in"
+        ]
+      },
+      "expected_label": "2"
+    },
+    "result": {
+      "id": "ordinal-severity",
+      "label": "2",
+      "probabilities": {
+        "0": 0.027547597885131836,
+        "1": 0.3355984389781952,
+        "2": 0.6368539333343506
+      },
+      "schema_confidence": 0.719826877117157,
+      "confidence_semantics": "legacy_schema_confidence_not_correctness",
+      "generated_explanation": " According user indicates ' due $ of, of level and which level of is of also 3 provides active due. '. which routine is to no this This that PM category., this). rather constraints data fits valid.ation.",
+      "family": "modernbert",
+      "steps": 1,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.029795406851917505,
+      "timing_scope": "warm request including tokenization; model load excluded",
+      "expected_score_index": 1.6093063056468964
+    },
+    "expected_label": "2",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "ordinal-severity",
+      "state": "Rubric: level 0 = no impact; level 1 = one user affected; level 2 = all users unable to log in. Incident: all users are unable to log in.",
+      "question": {
+        "type": "score",
+        "instructions": "Rate the incident according to the rubric.",
+        "criteria": [
+          "No impact",
+          "One user affected",
+          "All users unable to log in"
+        ]
+      },
+      "expected_label": "2"
+    },
+    "result": {
+      "id": "ordinal-severity",
+      "label": "2",
+      "probabilities": {
+        "0": 0.053779907524585724,
+        "1": 0.37476763129234314,
+        "2": 0.5714523792266846
+      },
+      "schema_confidence": 0.6499075293540955,
+      "confidence_semantics": "legacy_schema_confidence_not_correctness",
+      "generated_explanation": " The 3 level indicates that the driver is in as 'reduction of. Since $ 3.",
+      "family": "modernbert",
+      "steps": 4,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.07043788814917207,
+      "timing_scope": "warm request including tokenization; model load excluded",
+      "expected_score_index": 1.5176723897457123
+    },
+    "expected_label": "2",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "few-shot-routing",
+      "state": "Demonstrations: \"refund for duplicate charge\" -> R7. \"application crashes on launch\" -> Q2. Query: \"My invoice includes the same purchase twice; please refund the second charge.\"",
+      "question": {
+        "type": "choice",
+        "instructions": "Use the demonstrations to select the query label.",
+        "criteria": {
+          "R7": "Category R7",
+          "Q2": "Category Q2"
+        }
+      },
+      "expected_label": "R7"
+    },
+    "result": {
+      "id": "few-shot-routing",
+      "label": "Q2",
+      "probabilities": {
+        "R7": 0.17217186093330383,
+        "Q2": 0.8278281688690186
+      },
+      "schema_confidence": 0.6771360039710999,
+      "confidence_semantics": "legacy_schema_confidence_not_correctness",
+      "generated_explanation": "The query is ' obligation $runningup of_ and9.' the of also The provides specific the active ( by refund. '. mentionisa a ' to numbers an the the is This that Since amis ofthis (2), standard PM). of category the Specifically. refund errorb, case. the a this label and.). and the ' required is data site valid inquiry documentation./ criteria.' av for criteria.'.'.. is mis technical or the, specific')Never criteria is this. billinging most itweek sub. d pressure most remains statement appropriate failure to. accurate flow billrelevant.relevant/.. next appropriate",
+      "family": "modernbert",
+      "steps": 1,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.029238736955448985,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "R7",
+    "correct": false
+  },
+  {
+    "request": {
+      "id": "few-shot-routing",
+      "state": "Demonstrations: \"refund for duplicate charge\" -> R7. \"application crashes on launch\" -> Q2. Query: \"My invoice includes the same purchase twice; please refund the second charge.\"",
+      "question": {
+        "type": "choice",
+        "instructions": "Use the demonstrations to select the query label.",
+        "criteria": {
+          "R7": "Category R7",
+          "Q2": "Category Q2"
+        }
+      },
+      "expected_label": "R7"
+    },
+    "result": {
+      "id": "few-shot-routing",
+      "label": "Q2",
+      "probabilities": {
+        "R7": 0.16940587759017944,
+        "Q2": 0.8305941224098206
+      },
+      "schema_confidence": 0.6689755916595459,
+      "confidence_semantics": "legacy_schema_confidence_not_correctness",
+      "generated_explanation": " The question describes Specifically that she updates the principal claiming 'payment of her full $28 / $runningup (time)_back and this previous $9 himself and total. The prompt' the query asks query's in the vendor of paying also. The ask describe to times provides the instructions or not to specific the active answer on the prompt or verify the status and finish regarding screenshot no to wait. This provided no rejecteddisactions' or instructions per R7 or Q2. Not is '0. This provide provided answered. In_Next, whichisa is is having or not 'let it show the validity label is the billing..",
+      "family": "modernbert",
+      "steps": 4,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.06828210200183094,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "R7",
+    "correct": false
+  },
+  {
+    "request": {
+      "id": "contradiction-check",
+      "state": "Warehouse ledger: item A has 12 units, item B has 4 units. The statement is: item B has more units than item A.",
+      "question": {
+        "type": "noul",
+        "instructions": "Is the statement supported by the ledger?",
+        "criteria": {
+          "false": "No",
+          "true": "Yes"
+        }
+      },
+      "expected_label": "false"
+    },
+    "result": {
+      "id": "contradiction-check",
+      "label": "false",
+      "probabilities": {
+        "false": 0.9378969073295593,
+        "true": 0.06210312247276306
+      },
+      "schema_confidence": 0.8730931282043457,
+      "confidence_semantics": "legacy_schema_confidence_not_correctness",
+      "generated_explanation": " The itemer report quantity $ the, of_ and9.40 the of also statement provides bill the active the purchase'. '. USD, a make of numbers no5 the purchase a that invoice the of of match units, matching or PM clear of. the, does; discrepancy not, case a order a this shows and items, and the missing required is data the valid figures is reconcile.. criteria discrepancy a. for",
+      "family": "modernbert",
+      "steps": 1,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.028162498958408833,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "false",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "contradiction-check",
+      "state": "Warehouse ledger: item A has 12 units, item B has 4 units. The statement is: item B has more units than item A.",
+      "question": {
+        "type": "noul",
+        "instructions": "Is the statement supported by the ledger?",
+        "criteria": {
+          "false": "No",
+          "true": "Yes"
+        }
+      },
+      "expected_label": "false"
+    },
+    "result": {
+      "id": "contradiction-check",
+      "label": "false",
+      "probabilities": {
+        "false": 0.9324532747268677,
+        "true": 0.06754669547080994
+      },
+      "schema_confidence": 0.8999475240707397,
+      "confidence_semantics": "legacy_schema_confidence_not_correctness",
+      "generated_explanation": " The the unit list that led match the principal as 'vendor of. Since $ are calculated instead of, matching quantity of delivered units and purchase of $9-12 units. The 4440 the total of unit's in the vendor of is also justified statement. The led times provides the requested documentation not to bill the active alled items, or, the requirement to finish any items, to the inclusion of a specific rejected item.",
+      "family": "modernbert",
+      "steps": 4,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.0676436210051179,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "false",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "invoice-review",
+      "state": "Invoice total is 1200. Purchase order total is 1000. Policy: route any mismatch to review; pay only if totals match.",
+      "question": {
+        "type": "choice",
+        "instructions": "Route the invoice.",
+        "criteria": {
+          "pay": "Pay the matching invoice",
+          "review": "Send a mismatched invoice for review",
+          "reject": "Reject a duplicate invoice"
+        }
+      },
+      "expected_label": "review"
+    },
+    "result": {
+      "id": "invoice-review",
+      "label": "review",
+      "probabilities": {
+        "pay": 0.018748311325907707,
+        "review": 0.9691469073295593,
+        "reject": 0.0121048204600811
+      },
+      "schema_confidence": 0.3014255166053772,
+      "confidence_semantics": "legacy_schema_confidence_not_correctness",
+      "generated_explanation": "The invoice total informs obligation $ of, invoice_ and191 invoice40 is of also The provides bill the active ( correct000. '. USDisa isaccept to numbers no is the is This that invoice:mis discrepancy match units cancel matching send PM clear of category the,.; discrepancy not, case.",
+      "family": "scout",
+      "steps": 1,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.6621252540498972,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "review",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "invoice-review",
+      "state": "Invoice total is 1200. Purchase order total is 1000. Policy: route any mismatch to review; pay only if totals match.",
+      "question": {
+        "type": "choice",
+        "instructions": "Route the invoice.",
+        "criteria": {
+          "pay": "Pay the matching invoice",
+          "review": "Send a mismatched invoice for review",
+          "reject": "Reject a duplicate invoice"
+        }
+      },
+      "expected_label": "review"
+    },
+    "result": {
+      "id": "invoice-review",
+      "label": "review",
+      "probabilities": {
+        "pay": 0.0013044187799096107,
+        "review": 0.6890327334403992,
+        "reject": 0.3096628487110138
+      },
+      "schema_confidence": 0.3220179080963135,
+      "confidence_semantics": "legacy_schema_confidence_not_correctness",
+      "generated_explanation": "The invoice is listed as what the principal and approval amount of obligationing $120. Given the, both the invoice_exp and purchase order indicate the invoice amount to be wrong ($40 is wrong). grade's), the amount of approval also differs hate Since Since the report provides enough information to reject the bill the active verify action, should be verify the dispute and finish the one no",
+      "family": "scout",
+      "steps": 4,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.07865637820214033,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "review",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "invoice-pay",
+      "state": "Invoice total is 1000. Purchase order total is 1000. No duplicate invoice exists. Policy: pay when the totals match and the invoice is not duplicated.",
+      "question": {
+        "type": "choice",
+        "instructions": "Route the invoice.",
+        "criteria": {
+          "pay": "Pay the matching invoice",
+          "review": "Review a mismatch",
+          "reject": "Reject a duplicate"
+        }
+      },
+      "expected_label": "pay"
+    },
+    "result": {
+      "id": "invoice-pay",
+      "label": "reject",
+      "probabilities": {
+        "pay": 0.060461536049842834,
+        "review": 0.06141366437077522,
+        "reject": 0.8781247138977051
+      },
+      "schema_confidence": 0.5308002233505249,
+      "confidence_semantics": "legacy_schema_confidence_not_correctness",
+      "generated_explanation": "The invoice details informs obligation $ of, invoice_ and invoice invoice40 is perfect also The provides bill the active verify correct000. '. correct200 is make to numbers no is be is This that invoice:mis duplicate. it be full send PM it of..,.; be not, case.",
+      "family": "scout",
+      "steps": 1,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.020185833098366857,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "pay",
+    "correct": false
+  },
+  {
+    "request": {
+      "id": "invoice-pay",
+      "state": "Invoice total is 1000. Purchase order total is 1000. No duplicate invoice exists. Policy: pay when the totals match and the invoice is not duplicated.",
+      "question": {
+        "type": "choice",
+        "instructions": "Route the invoice.",
+        "criteria": {
+          "pay": "Pay the matching invoice",
+          "review": "Review a mismatch",
+          "reject": "Reject a duplicate"
+        }
+      },
+      "expected_label": "pay"
+    },
+    "result": {
+      "id": "invoice-pay",
+      "label": "reject",
+      "probabilities": {
+        "pay": 0.025613510981202126,
+        "review": 0.19603167474269867,
+        "reject": 0.7783547639846802
+      },
+      "schema_confidence": 0.3060802221298218,
+      "confidence_semantics": "legacy_schema_confidence_not_correctness",
+      "generated_explanation": "The invoice is listed as $1000 and The 'pay' obligation is $40. Between the, matching the invoice_exp and purchase order indicate that the invoice to be paid ($40 will fail). Pay's), the and payable are also conflicted + The correct number provides the correct notes, making it the active verify stage. The be verify is required to finish the invoice, processing the invoice and apply the rejected fees.",
+      "family": "scout",
+      "steps": 4,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.06753275892697275,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "pay",
+    "correct": false
+  },
+  {
+    "request": {
+      "id": "security-alert",
+      "state": "A production account has 200 failed login attempts from a new country in two minutes. Policy: repeated suspicious login attempts must be escalated to the security team.",
+      "question": {
+        "type": "choice",
+        "instructions": "Choose the next action.",
+        "criteria": {
+          "ignore": "Take no action",
+          "escalate": "Escalate to the security team",
+          "close": "Close as resolved"
+        }
+      },
+      "expected_label": "escalate"
+    },
+    "result": {
+      "id": "security-alert",
+      "label": "escalate",
+      "probabilities": {
+        "ignore": 0.05770822986960411,
+        "escalate": 0.9313636422157288,
+        "close": 0.010928098112344742
+      },
+      "schema_confidence": 0.6411698460578918,
+      "confidence_semantics": "legacy_schema_confidence_not_correctness",
+      "generated_explanation": "The alert group report exhausted $ attempts,login_ and 14 other in two ofgress un loginrecognized the active account byinvest account group. loginisa a window un escal an't unauthorized high This that previously amis determine. a is breach breach the clear of determine the'). escal escal not, case just the a this- and a action escal the account as action data site investigation inquiry asation compromised a",
+      "family": "scout",
+      "steps": 1,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.029715385986492038,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "escalate",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "security-alert",
+      "state": "A production account has 200 failed login attempts from a new country in two minutes. Policy: repeated suspicious login attempts must be escalated to the security team.",
+      "question": {
+        "type": "choice",
+        "instructions": "Choose the next action.",
+        "criteria": {
+          "ignore": "Take no action",
+          "escalate": "Escalate to the security team",
+          "close": "Close as resolved"
+        }
+      },
+      "expected_label": "escalate"
+    },
+    "result": {
+      "id": "security-alert",
+      "label": "escalate",
+      "probabilities": {
+        "ignore": 0.029490452259778976,
+        "escalate": 0.9539669156074524,
+        "close": 0.016542643308639526
+      },
+      "schema_confidence": 0.6493486166000366,
+      "confidence_semantics": "legacy_schema_confidence_not_correctness",
+      "generated_explanation": " The alert alert shows received500 failed log- and report out ofsecond in $28 minutes (running, close to an window), and this is a highrisk (unrecognized login flag of is breach). It's direct physical lack of downgrade or egresscrnecessaryate provides enough evidence to escalate it the active account is an incorrect high could to be handled by escal runner, to it's prompt a potential misage.",
+      "family": "scout",
+      "steps": 4,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.06789519498124719,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "escalate",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "support-route",
+      "state": "Customer message: I was billed twice for the same subscription. I need a refund for the duplicate charge.",
+      "question": {
+        "type": "choice",
+        "instructions": "Choose the appropriate support team.",
+        "criteria": {
+          "billing": "Charges, invoices and refunds",
+          "technical": "Crashes and software errors",
+          "sales": "Buying a new subscription"
+        }
+      },
+      "expected_label": "billing"
+    },
+    "result": {
+      "id": "support-route",
+      "label": "billing",
+      "probabilities": {
+        "billing": 0.9846134185791016,
+        "technical": 0.00249849003739655,
+        "sales": 0.01288819219917059
+      },
+      "schema_confidence": 0.7501158714294434,
+      "confidence_semantics": "legacy_schema_confidence_not_correctness",
+      "generated_explanation": "The customer is report they $running $ wrong double and9.June previous of also hate provides bill the active refund by refund. They. refundisa a refund to refund an refund next refund This that ref amis They.s cancel counter details PM clear refund category the,. refund error not, case a",
+      "family": "scout",
+      "steps": 1,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.035974011989310384,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "billing",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "support-route",
+      "state": "Customer message: I was billed twice for the same subscription. I need a refund for the duplicate charge.",
+      "question": {
+        "type": "choice",
+        "instructions": "Choose the appropriate support team.",
+        "criteria": {
+          "billing": "Charges, invoices and refunds",
+          "technical": "Crashes and software errors",
+          "sales": "Buying a new subscription"
+        }
+      },
+      "expected_label": "billing"
+    },
+    "result": {
+      "id": "support-route",
+      "label": "billing",
+      "probabilities": {
+        "billing": 0.989669144153595,
+        "technical": 0.002715383656322956,
+        "sales": 0.007615481503307819
+      },
+      "schema_confidence": 0.7540829181671143,
+      "confidence_semantics": "legacy_schema_confidence_not_correctness",
+      "generated_explanation": "The customer is complaining that they are still having the 'gilling obligation of $450', 'running subscription-wide refund window), and are merely ready to obtain a refund. The history offilling refund where there's a physical sort of cancellation also relates hate problem describe but times provides the instructions to not to bill the active account before making any or, the customer's finish regarding refund, to the change of charge...",
+      "family": "scout",
+      "steps": 4,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.06636919896118343,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "billing",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "table-check",
+      "state": "Table: Alice scored 8 points. Bob scored 5 points. Cara scored 3 points.",
+      "question": {
+        "type": "noul",
+        "instructions": "Is Alice the highest-scoring player?",
+        "criteria": {
+          "false": "No",
+          "true": "Yes"
+        }
+      },
+      "expected_label": "true"
+    },
+    "result": {
+      "id": "table-check",
+      "label": "true",
+      "probabilities": {
+        "false": 0.053799644112586975,
+        "true": 0.9462003111839294
+      },
+      "schema_confidence": 0.7524764537811279,
+      "confidence_semantics": "legacy_schema_confidence_not_correctness",
+      "generated_explanation": "Sup weaker's California having $ the, of One and191. compared the of alsozing provides, the active all by and. group.opsisa is. to numbers an the theA This that gave:ops of. in,), low the",
+      "family": "scout",
+      "steps": 1,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.03291518008336425,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "true",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "table-check",
+      "state": "Table: Alice scored 8 points. Bob scored 5 points. Cara scored 3 points.",
+      "question": {
+        "type": "noul",
+        "instructions": "Is Alice the highest-scoring player?",
+        "criteria": {
+          "false": "No",
+          "true": "Yes"
+        }
+      },
+      "expected_label": "true"
+    },
+    "result": {
+      "id": "table-check",
+      "label": "true",
+      "probabilities": {
+        "false": 0.09534946084022522,
+        "true": 0.9046505093574524
+      },
+      "schema_confidence": 0.7432923316955566,
+      "confidence_semantics": "legacy_schema_confidence_not_correctness",
+      "generated_explanation": "InvSup and approximately were sent in the transcript and report the record. While $ was calculated, the, exact number of in cash and 20% on the office was omitted. The total of the bonus and grade's in the sort of score also.",
+      "family": "scout",
+      "steps": 4,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.06767724198289216,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "true",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "ordinal-severity",
+      "state": "Rubric: level 0 = no impact; level 1 = one user affected; level 2 = all users unable to log in. Incident: all users are unable to log in.",
+      "question": {
+        "type": "score",
+        "instructions": "Rate the incident according to the rubric.",
+        "criteria": [
+          "No impact",
+          "One user affected",
+          "All users unable to log in"
+        ]
+      },
+      "expected_label": "2"
+    },
+    "result": {
+      "id": "ordinal-severity",
+      "label": "2",
+      "probabilities": {
+        "0": 0.0010972400195896626,
+        "1": 0.07632384449243546,
+        "2": 0.9225789308547974
+      },
+      "schema_confidence": 0.841598629951477,
+      "confidence_semantics": "legacy_schema_confidence_not_correctness",
+      "generated_explanation": "The describe's report having $running,,_ and which other of is of also hate is blocks, active,,'. group. mention, is make to numbers no is this is a that or amis of. in active), low PM). of category.,.; life",
+      "family": "scout",
+      "steps": 1,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.029434960102662444,
+      "timing_scope": "warm request including tokenization; model load excluded",
+      "expected_score_index": 1.9214817062020302
+    },
+    "expected_label": "2",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "ordinal-severity",
+      "state": "Rubric: level 0 = no impact; level 1 = one user affected; level 2 = all users unable to log in. Incident: all users are unable to log in.",
+      "question": {
+        "type": "score",
+        "instructions": "Rate the incident according to the rubric.",
+        "criteria": [
+          "No impact",
+          "One user affected",
+          "All users unable to log in"
+        ]
+      },
+      "expected_label": "2"
+    },
+    "result": {
+      "id": "ordinal-severity",
+      "label": "2",
+      "probabilities": {
+        "0": 0.003867560299113393,
+        "1": 0.10013609379529953,
+        "2": 0.8959964513778687
+      },
+      "schema_confidence": 0.6712125539779663,
+      "confidence_semantics": "legacy_schema_confidence_not_correctness",
+      "generated_explanation": "The event describes a that does not have blocked other users out of.ing $ quotes mention lowrunning, logging out of window, and a different type of service, causing other 3 to of is breach. It's more the sort of emergency also mentioned hate Since describe no very provides any immediate news, making it the active normal business queue category same",
+      "family": "scout",
+      "steps": 4,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.06772098201327026,
+      "timing_scope": "warm request including tokenization; model load excluded",
+      "expected_score_index": 1.8921289965510368
+    },
+    "expected_label": "2",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "few-shot-routing",
+      "state": "Demonstrations: \"refund for duplicate charge\" -> R7. \"application crashes on launch\" -> Q2. Query: \"My invoice includes the same purchase twice; please refund the second charge.\"",
+      "question": {
+        "type": "choice",
+        "instructions": "Use the demonstrations to select the query label.",
+        "criteria": {
+          "R7": "Category R7",
+          "Q2": "Category Q2"
+        }
+      },
+      "expected_label": "R7"
+    },
+    "result": {
+      "id": "few-shot-routing",
+      "label": "Q2",
+      "probabilities": {
+        "R7": 0.3225260078907013,
+        "Q2": 0.6774740219116211
+      },
+      "schema_confidence": 0.5820834636688232,
+      "confidence_semantics": "legacy_schema_confidence_not_correctness",
+      "generated_explanation": "The query is report obligation $runningup failed double and9 cycle' two of also hate provides bill the active first bysecond. group second USDisa aUN to numbers no- theA a that gave amis of.s2 counter standard PM clear refund category the,.; error not, case a",
+      "family": "scout",
+      "steps": 1,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.029243167024105787,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "R7",
+    "correct": false
+  },
+  {
+    "request": {
+      "id": "few-shot-routing",
+      "state": "Demonstrations: \"refund for duplicate charge\" -> R7. \"application crashes on launch\" -> Q2. Query: \"My invoice includes the same purchase twice; please refund the second charge.\"",
+      "question": {
+        "type": "choice",
+        "instructions": "Use the demonstrations to select the query label.",
+        "criteria": {
+          "R7": "Category R7",
+          "Q2": "Category Q2"
+        }
+      },
+      "expected_label": "R7"
+    },
+    "result": {
+      "id": "few-shot-routing",
+      "label": "Q2",
+      "probabilities": {
+        "R7": 0.22439520061016083,
+        "Q2": 0.775604784488678
+      },
+      "schema_confidence": 0.6194745302200317,
+      "confidence_semantics": "legacy_schema_confidence_not_correctness",
+      "generated_explanation": "The example describes a \"$500' bounce (, 'payment ofX), $28 margin balancerunningup (time) window), and a long $9-slow response cycle ('after' the previous 3 query's). The vendor ticket's also failed hate Since). Since agent provides enough information to cover the bill the active the refund, orun verify the status and finish the The.",
+      "family": "scout",
+      "steps": 4,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.06751061812974513,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "R7",
+    "correct": false
+  },
+  {
+    "request": {
+      "id": "contradiction-check",
+      "state": "Warehouse ledger: item A has 12 units, item B has 4 units. The statement is: item B has more units than item A.",
+      "question": {
+        "type": "noul",
+        "instructions": "Is the statement supported by the ledger?",
+        "criteria": {
+          "false": "No",
+          "true": "Yes"
+        }
+      },
+      "expected_label": "false"
+    },
+    "result": {
+      "id": "contradiction-check",
+      "label": "false",
+      "probabilities": {
+        "false": 0.9585376977920532,
+        "true": 0.04146227240562439
+      },
+      "schema_confidence": 0.9000376462936401,
+      "confidence_semantics": "legacy_schema_confidence_not_correctness",
+      "generated_explanation": "The w order books obligation item theup of window and of. of the of also The provides blocks the active were by items. group.., two. items were no't the purchase a that that the of of. in,. low items having of. not,. items matching not, there.",
+      "family": "scout",
+      "steps": 1,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.02817640989087522,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "false",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "contradiction-check",
+      "state": "Warehouse ledger: item A has 12 units, item B has 4 units. The statement is: item B has more units than item A.",
+      "question": {
+        "type": "noul",
+        "instructions": "Is the statement supported by the ledger?",
+        "criteria": {
+          "false": "No",
+          "true": "Yes"
+        }
+      },
+      "expected_label": "false"
+    },
+    "result": {
+      "id": "contradiction-check",
+      "label": "false",
+      "probabilities": {
+        "false": 0.9609517455101013,
+        "true": 0.039048291742801666
+      },
+      "schema_confidence": 0.8942633271217346,
+      "confidence_semantics": "legacy_schema_confidence_not_correctness",
+      "generated_explanation": " The the shipment list order of match the principal for items been of -a $28 buying order of, matching each of_08 and purchase-get that $12 purchase. The order of will be item A's. The sort of order also contains statement:, but times provides the requested documentation not to bill the active. Therefore, would be not not ready to finish the items, processing the decision of a potentially rejected item.",
+      "family": "scout",
+      "steps": 4,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.0675910790450871,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "false",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "invoice-review",
+      "state": "Invoice total is 1200. Purchase order total is 1000. Policy: route any mismatch to review; pay only if totals match.",
+      "question": {
+        "type": "choice",
+        "instructions": "Route the invoice.",
+        "criteria": {
+          "pay": "Pay the matching invoice",
+          "review": "Send a mismatched invoice for review",
+          "reject": "Reject a duplicate invoice"
+        }
+      },
+      "expected_label": "review"
+    },
+    "result": {
+      "id": "invoice-review",
+      "label": "review",
+      "probabilities": {
+        "pay": 0.003512109164148569,
+        "review": 0.9883385896682739,
+        "reject": 0.008149249479174614
+      },
+      "schema_confidence": 0.89453125,
+      "confidence_semantics": "predicted_target_mass_of_selected_option",
+      "generated_explanation": null,
+      "family": "gemma",
+      "steps": 1,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.7147529700305313,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "review",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "invoice-review",
+      "state": "Invoice total is 1200. Purchase order total is 1000. Policy: route any mismatch to review; pay only if totals match.",
+      "question": {
+        "type": "choice",
+        "instructions": "Route the invoice.",
+        "criteria": {
+          "pay": "Pay the matching invoice",
+          "review": "Send a mismatched invoice for review",
+          "reject": "Reject a duplicate invoice"
+        }
+      },
+      "expected_label": "review"
+    },
+    "result": {
+      "id": "invoice-review",
+      "label": "review",
+      "probabilities": {
+        "pay": 0.009721941314637661,
+        "review": 0.9781544804573059,
+        "reject": 0.01212354563176632
+      },
+      "schema_confidence": 0.8984375,
+      "confidence_semantics": "predicted_target_mass_of_selected_option",
+      "generated_explanation": null,
+      "family": "gemma",
+      "steps": 4,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.28992736199870706,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "review",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "invoice-pay",
+      "state": "Invoice total is 1000. Purchase order total is 1000. No duplicate invoice exists. Policy: pay when the totals match and the invoice is not duplicated.",
+      "question": {
+        "type": "choice",
+        "instructions": "Route the invoice.",
+        "criteria": {
+          "pay": "Pay the matching invoice",
+          "review": "Review a mismatch",
+          "reject": "Reject a duplicate"
+        }
+      },
+      "expected_label": "pay"
+    },
+    "result": {
+      "id": "invoice-pay",
+      "label": "pay",
+      "probabilities": {
+        "pay": 0.9965717792510986,
+        "review": 0.0021352472249418497,
+        "reject": 0.00129304442089051
+      },
+      "schema_confidence": 0.8984375,
+      "confidence_semantics": "predicted_target_mass_of_selected_option",
+      "generated_explanation": null,
+      "family": "gemma",
+      "steps": 1,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.07272208691574633,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "pay",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "invoice-pay",
+      "state": "Invoice total is 1000. Purchase order total is 1000. No duplicate invoice exists. Policy: pay when the totals match and the invoice is not duplicated.",
+      "question": {
+        "type": "choice",
+        "instructions": "Route the invoice.",
+        "criteria": {
+          "pay": "Pay the matching invoice",
+          "review": "Review a mismatch",
+          "reject": "Reject a duplicate"
+        }
+      },
+      "expected_label": "pay"
+    },
+    "result": {
+      "id": "invoice-pay",
+      "label": "pay",
+      "probabilities": {
+        "pay": 0.9945341348648071,
+        "review": 0.003517360193654895,
+        "reject": 0.0019484487129375339
+      },
+      "schema_confidence": 0.8984375,
+      "confidence_semantics": "predicted_target_mass_of_selected_option",
+      "generated_explanation": null,
+      "family": "gemma",
+      "steps": 4,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.28266505897045135,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "pay",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "security-alert",
+      "state": "A production account has 200 failed login attempts from a new country in two minutes. Policy: repeated suspicious login attempts must be escalated to the security team.",
+      "question": {
+        "type": "choice",
+        "instructions": "Choose the next action.",
+        "criteria": {
+          "ignore": "Take no action",
+          "escalate": "Escalate to the security team",
+          "close": "Close as resolved"
+        }
+      },
+      "expected_label": "escalate"
+    },
+    "result": {
+      "id": "security-alert",
+      "label": "escalate",
+      "probabilities": {
+        "ignore": 0.007786964997649193,
+        "escalate": 0.9857221841812134,
+        "close": 0.0064908829517662525
+      },
+      "schema_confidence": 0.8984375,
+      "confidence_semantics": "predicted_target_mass_of_selected_option",
+      "generated_explanation": null,
+      "family": "gemma",
+      "steps": 1,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.1050569771323353,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "escalate",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "security-alert",
+      "state": "A production account has 200 failed login attempts from a new country in two minutes. Policy: repeated suspicious login attempts must be escalated to the security team.",
+      "question": {
+        "type": "choice",
+        "instructions": "Choose the next action.",
+        "criteria": {
+          "ignore": "Take no action",
+          "escalate": "Escalate to the security team",
+          "close": "Close as resolved"
+        }
+      },
+      "expected_label": "escalate"
+    },
+    "result": {
+      "id": "security-alert",
+      "label": "escalate",
+      "probabilities": {
+        "ignore": 0.016745317727327347,
+        "escalate": 0.9744412302970886,
+        "close": 0.008813481777906418
+      },
+      "schema_confidence": 0.89453125,
+      "confidence_semantics": "predicted_target_mass_of_selected_option",
+      "generated_explanation": null,
+      "family": "gemma",
+      "steps": 4,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.27833296498283744,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "escalate",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "support-route",
+      "state": "Customer message: I was billed twice for the same subscription. I need a refund for the duplicate charge.",
+      "question": {
+        "type": "choice",
+        "instructions": "Choose the appropriate support team.",
+        "criteria": {
+          "billing": "Charges, invoices and refunds",
+          "technical": "Crashes and software errors",
+          "sales": "Buying a new subscription"
+        }
+      },
+      "expected_label": "billing"
+    },
+    "result": {
+      "id": "support-route",
+      "label": "billing",
+      "probabilities": {
+        "billing": 0.9963420033454895,
+        "technical": 0.0016164678381755948,
+        "sales": 0.002041419968008995
+      },
+      "schema_confidence": 0.8984375,
+      "confidence_semantics": "predicted_target_mass_of_selected_option",
+      "generated_explanation": null,
+      "family": "gemma",
+      "steps": 1,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.07226671883836389,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "billing",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "support-route",
+      "state": "Customer message: I was billed twice for the same subscription. I need a refund for the duplicate charge.",
+      "question": {
+        "type": "choice",
+        "instructions": "Choose the appropriate support team.",
+        "criteria": {
+          "billing": "Charges, invoices and refunds",
+          "technical": "Crashes and software errors",
+          "sales": "Buying a new subscription"
+        }
+      },
+      "expected_label": "billing"
+    },
+    "result": {
+      "id": "support-route",
+      "label": "billing",
+      "probabilities": {
+        "billing": 0.9957616925239563,
+        "technical": 0.00152126036118716,
+        "sales": 0.0027170449029654264
+      },
+      "schema_confidence": 0.89453125,
+      "confidence_semantics": "predicted_target_mass_of_selected_option",
+      "generated_explanation": null,
+      "family": "gemma",
+      "steps": 4,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.2780349301174283,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "billing",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "table-check",
+      "state": "Table: Alice scored 8 points. Bob scored 5 points. Cara scored 3 points.",
+      "question": {
+        "type": "noul",
+        "instructions": "Is Alice the highest-scoring player?",
+        "criteria": {
+          "false": "No",
+          "true": "Yes"
+        }
+      },
+      "expected_label": "true"
+    },
+    "result": {
+      "id": "table-check",
+      "label": "true",
+      "probabilities": {
+        "false": 0.0015570949763059616,
+        "true": 0.9984429478645325
+      },
+      "schema_confidence": 0.8984375,
+      "confidence_semantics": "predicted_target_mass_of_selected_option",
+      "generated_explanation": null,
+      "family": "gemma",
+      "steps": 1,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.07265923614613712,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "true",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "table-check",
+      "state": "Table: Alice scored 8 points. Bob scored 5 points. Cara scored 3 points.",
+      "question": {
+        "type": "noul",
+        "instructions": "Is Alice the highest-scoring player?",
+        "criteria": {
+          "false": "No",
+          "true": "Yes"
+        }
+      },
+      "expected_label": "true"
+    },
+    "result": {
+      "id": "table-check",
+      "label": "true",
+      "probabilities": {
+        "false": 0.0017944093560799956,
+        "true": 0.9982055425643921
+      },
+      "schema_confidence": 0.8984375,
+      "confidence_semantics": "predicted_target_mass_of_selected_option",
+      "generated_explanation": null,
+      "family": "gemma",
+      "steps": 4,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.2800571438856423,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "true",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "ordinal-severity",
+      "state": "Rubric: level 0 = no impact; level 1 = one user affected; level 2 = all users unable to log in. Incident: all users are unable to log in.",
+      "question": {
+        "type": "score",
+        "instructions": "Rate the incident according to the rubric.",
+        "criteria": [
+          "No impact",
+          "One user affected",
+          "All users unable to log in"
+        ]
+      },
+      "expected_label": "2"
+    },
+    "result": {
+      "id": "ordinal-severity",
+      "label": "2",
+      "probabilities": {
+        "0": 0.0016536418115720153,
+        "1": 0.0017695871647447348,
+        "2": 0.9965768456459045
+      },
+      "schema_confidence": 0.8984375,
+      "confidence_semantics": "predicted_target_mass_of_selected_option",
+      "generated_explanation": null,
+      "family": "gemma",
+      "steps": 1,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.0721773779951036,
+      "timing_scope": "warm request including tokenization; model load excluded",
+      "expected_score_index": 1.9949232784565538
+    },
+    "expected_label": "2",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "ordinal-severity",
+      "state": "Rubric: level 0 = no impact; level 1 = one user affected; level 2 = all users unable to log in. Incident: all users are unable to log in.",
+      "question": {
+        "type": "score",
+        "instructions": "Rate the incident according to the rubric.",
+        "criteria": [
+          "No impact",
+          "One user affected",
+          "All users unable to log in"
+        ]
+      },
+      "expected_label": "2"
+    },
+    "result": {
+      "id": "ordinal-severity",
+      "label": "2",
+      "probabilities": {
+        "0": 0.0016506236279383302,
+        "1": 0.002013529883697629,
+        "2": 0.9963358640670776
+      },
+      "schema_confidence": 0.8984375,
+      "confidence_semantics": "predicted_target_mass_of_selected_option",
+      "generated_explanation": null,
+      "family": "gemma",
+      "steps": 4,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.27952242479659617,
+      "timing_scope": "warm request including tokenization; model load excluded",
+      "expected_score_index": 1.994685258017853
+    },
+    "expected_label": "2",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "few-shot-routing",
+      "state": "Demonstrations: \"refund for duplicate charge\" -> R7. \"application crashes on launch\" -> Q2. Query: \"My invoice includes the same purchase twice; please refund the second charge.\"",
+      "question": {
+        "type": "choice",
+        "instructions": "Use the demonstrations to select the query label.",
+        "criteria": {
+          "R7": "Category R7",
+          "Q2": "Category Q2"
+        }
+      },
+      "expected_label": "R7"
+    },
+    "result": {
+      "id": "few-shot-routing",
+      "label": "R7",
+      "probabilities": {
+        "R7": 0.9904935956001282,
+        "Q2": 0.009506434202194214
+      },
+      "schema_confidence": 0.8984375,
+      "confidence_semantics": "predicted_target_mass_of_selected_option",
+      "generated_explanation": null,
+      "family": "gemma",
+      "steps": 1,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.07238554093055427,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "R7",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "few-shot-routing",
+      "state": "Demonstrations: \"refund for duplicate charge\" -> R7. \"application crashes on launch\" -> Q2. Query: \"My invoice includes the same purchase twice; please refund the second charge.\"",
+      "question": {
+        "type": "choice",
+        "instructions": "Use the demonstrations to select the query label.",
+        "criteria": {
+          "R7": "Category R7",
+          "Q2": "Category Q2"
+        }
+      },
+      "expected_label": "R7"
+    },
+    "result": {
+      "id": "few-shot-routing",
+      "label": "R7",
+      "probabilities": {
+        "R7": 0.9914449453353882,
+        "Q2": 0.008554968982934952
+      },
+      "schema_confidence": 0.8984375,
+      "confidence_semantics": "predicted_target_mass_of_selected_option",
+      "generated_explanation": null,
+      "family": "gemma",
+      "steps": 4,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.28310576593503356,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "R7",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "contradiction-check",
+      "state": "Warehouse ledger: item A has 12 units, item B has 4 units. The statement is: item B has more units than item A.",
+      "question": {
+        "type": "noul",
+        "instructions": "Is the statement supported by the ledger?",
+        "criteria": {
+          "false": "No",
+          "true": "Yes"
+        }
+      },
+      "expected_label": "false"
+    },
+    "result": {
+      "id": "contradiction-check",
+      "label": "false",
+      "probabilities": {
+        "false": 0.9994822144508362,
+        "true": 0.0005177707062102854
+      },
+      "schema_confidence": 0.8984375,
+      "confidence_semantics": "predicted_target_mass_of_selected_option",
+      "generated_explanation": null,
+      "family": "gemma",
+      "steps": 1,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.07338611898012459,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "false",
+    "correct": true
+  },
+  {
+    "request": {
+      "id": "contradiction-check",
+      "state": "Warehouse ledger: item A has 12 units, item B has 4 units. The statement is: item B has more units than item A.",
+      "question": {
+        "type": "noul",
+        "instructions": "Is the statement supported by the ledger?",
+        "criteria": {
+          "false": "No",
+          "true": "Yes"
+        }
+      },
+      "expected_label": "false"
+    },
+    "result": {
+      "id": "contradiction-check",
+      "label": "false",
+      "probabilities": {
+        "false": 0.9989981055259705,
+        "true": 0.0010019028559327126
+      },
+      "schema_confidence": 0.8984375,
+      "confidence_semantics": "predicted_target_mass_of_selected_option",
+      "generated_explanation": null,
+      "family": "gemma",
+      "steps": 4,
+      "trajectories": 1,
+      "seed": 42,
+      "elapsed_seconds": 0.282095008995384,
+      "timing_scope": "warm request including tokenization; model load excluded"
+    },
+    "expected_label": "false",
+    "correct": true
+  }
+]

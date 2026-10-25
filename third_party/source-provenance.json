@@ -1,0 +1,56 @@
+[
+  {
+    "source": "laya/common.py",
+    "source_sha256": "9358176290b519b3e1df0077e6b55ce6a57e191abaf8401f3f7c35cb62596868",
+    "destination": "diffusion_jev/modernbert/common.py",
+    "adapted": false
+  },
+  {
+    "source": "research/diffusion/config.py",
+    "source_sha256": "0c33c91c903c08eb54f4abf9fd09f02c29927d9be54163e33a05b1614ecc81cd",
+    "destination": "diffusion_jev/modernbert/config.py",
+    "adapted": true
+  },
+  {
+    "source": "research/diffusion/data.py",
+    "source_sha256": "cbfc38147391c4c79be24893ad25f8fd2fedecaaaeba83860f57d80032029439",
+    "destination": "diffusion_jev/modernbert/data.py",
+    "adapted": true
+  },
+  {
+    "source": "research/diffusion/model.py",
+    "source_sha256": "abd3bb38baf15e59b17a975b14c0a8d67b50940c92861d7ff6b570c2f46f6d2f",
+    "destination": "diffusion_jev/modernbert/model.py",
+    "adapted": true
+  },
+  {
+    "source": "research/diffusion/process.py",
+    "source_sha256": "64f50b5f17dc98f70c05412a0da6e694bc49807b4a9eb5cb7e31809fdd7ab422",
+    "destination": "diffusion_jev/modernbert/process.py",
+    "adapted": true
+  },
+  {
+    "source": "research/diffusion/checkpoint.py",
+    "source_sha256": "df3b62241fb637bc36b8c41f7d38a620ca593cdecf39d97a65378dac0f59f1af",
+    "destination": "diffusion_jev/modernbert/checkpoint.py",
+    "adapted": true
+  },
+  {
+    "source": "research/diffusion/metrics.py",
+    "source_sha256": "5a50cc2b778576eb8809a54a53f6f70002b97568b9ba8a133279f36fc15035bd",
+    "destination": "diffusion_jev/modernbert/metrics.py",
+    "adapted": true
+  },
+  {
+    "source": "research/scout_diffusion/model.py",
+    "source_sha256": "ddcd8f0e5f54a8ace0502f6cbf4fe18bf2f4cb7af783a9441ab5c6fc8670e9b0",
+    "destination": "diffusion_jev/vision/model.py",
+    "adapted": true
+  },
+  {
+    "source": "research/colossal_gemma/model.py",
+    "source_sha256": "b6880849815971468529e4b45c2973704424ae5c6d104fd7c0911e4b79a1421f",
+    "destination": "diffusion_jev/gemma/model.py",
+    "adapted": true
+  }
+]

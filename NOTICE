@@ -1,0 +1,13 @@
+diffusion-jev
+
+This distribution includes code adapted from Laya, originally distributed under
+the Apache License, Version 2.0: https://github.com/NandhaKishorM/laya
+The original license is preserved in LICENSE.
+
+diffusion_jev/modernbert/common.py retains Laya's schema and model utilities.
+The ModernBERT, Scout and Gemma denoisers derive from the local Laya research
+experiments. third_party/source-provenance.json records source file identities
+and changes made during extraction. New CLI, training and demo integration are
+part of this toolkit. Referenced pretrained models and datasets are separate
+artifacts with their own notices; their weights and training data are not
+distributed in this source repository.

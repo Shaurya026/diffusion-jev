@@ -1,0 +1,14 @@
+{
+  "family": "gemma",
+  "description": "Readable supervised-data starting recipe; no fabricated teacher cache.",
+  "base": "google/gemma-4-E4B-it",
+  "base_revision": "ee0ef6023621cff504d758262d4e04895a5af4a2",
+  "max_length": 8192,
+  "reasoning_tokens": 256,
+  "lora_rank": 32,
+  "epochs": 5,
+  "batch_size_per_gpu": 1,
+  "lr": 0.0001,
+  "eval_steps": 1,
+  "seed": 42
+}

@@ -1,0 +1,13 @@
+# Observed training/runtime versions; install Torch for your platform first.
+torch==2.8.0+cu128
+transformers==5.12.1
+peft==0.19.1
+accelerate==1.12.0
+safetensors==0.8.0
+numpy==2.2.6
+tokenizers==0.22.2
+huggingface_hub==1.21.0
+Pillow==12.2.0
+datasets==4.8.4
+pytest==9.0.2
+gradio==5.49.1
